@@ -1,0 +1,5 @@
+C:/Users/ankee/Documents/GitHub/EECS488-P3-GALAGA/GALAGA/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/ankee/Documents/GitHub/EECS488-P3-GALAGA/GALAGA/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ankee/Documents/GitHub/EECS488-P3-GALAGA/GALAGA/out/build/x64-Debug/GALAGA/CMakeFiles/GALAGA.dir
+C:/Users/ankee/Documents/GitHub/EECS488-P3-GALAGA/GALAGA/out/build/x64-Debug/GALAGA/CMakeFiles/edit_cache.dir
+C:/Users/ankee/Documents/GitHub/EECS488-P3-GALAGA/GALAGA/out/build/x64-Debug/GALAGA/CMakeFiles/rebuild_cache.dir
