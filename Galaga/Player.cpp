@@ -18,16 +18,16 @@ void Player::Movement(Event e)
         switch (e.key.code)
         {
         case Keyboard::A:
-            shape.move(-50, 0);
+            shape.move(-100, 0);
             break;
         case Keyboard::W:
-            shape.move(0, -50);
+            shape.move(0, -100);
             break;
         case Keyboard::D:
-            shape.move(50, 0);
+            shape.move(100, 0);
             break;
         case Keyboard::S:
-            shape.move(0, 50);
+            shape.move(0, 100);
             break;
         }
 }
