@@ -4,6 +4,7 @@
 #include "SFML\Window.hpp"
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
+#include "Player.h"
 
 using namespace sf;
 
@@ -14,14 +15,30 @@ int main()
     window.setFramerateLimit(30);
                         //Rate at which window updates
 
+    Player p;
     while (window.isOpen()) {
         Event e;
 
 
-        CircleShape shape(220.f);
+       
 
                     // Checks for any input from user and it send it to event handler
         while (window.pollEvent(e)) {
+            if (e.type == Event::KeyPressed)
+            {
+                if (e.key.code == Keyboard::Space)
+                {
+                    p.Shoot(e);
+                }
+                else if (e.key.code == Keyboard::Escape)
+                {
+                    window.close();
+                }
+                else
+                {
+                    p.Movement(e);
+                }
+            }
             if (e.type == Event::Closed)
                 window.close();
 
@@ -30,7 +47,7 @@ int main()
         //Clears the window
         window.clear();
 
-        window.draw(shape);
+        window.draw(p.getShape());
 
         //Displays the new frame
         window.display();
