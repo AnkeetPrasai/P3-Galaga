@@ -2,6 +2,7 @@ Alex Wilhelm:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
 3/19: 0.75 hr - Idea Drafting
 3/23: 1 hr - Approval Request, Starting initial documentation files
+3/26: 2 hr - Setting up git, researching SMFL, adding music-sound effects, using arrows to move, updating hour estimate
 
 2.25 hr total
 
