@@ -10,6 +10,11 @@ using namespace sf;
 
 int main()
 {
+	RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
+					//Videomode you can set size
+	window.setFramerateLimit(30);
+
+	//Rate at which window updates
 	//sf::Music music;
 	//if (!music.openFromFile("Laser.ogg"))
 		//return -1; // error
@@ -20,18 +25,10 @@ int main()
 		return -1; // error
 	music.play();
 
-    RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
-                        //Videomode you can set size
-    window.setFramerateLimit(30);
-                        //Rate at which window updates
 
     Player p;
     while (window.isOpen()) {
-        Event e;
-
-	
-
-       
+        Event e;       
 
                     // Checks for any input from user and it send it to event handler
         while (window.pollEvent(e)) {

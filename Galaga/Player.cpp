@@ -1,4 +1,6 @@
 #include "Player.h"
+sf::Music music;
+
 
 Player::Player()
 {
@@ -20,15 +22,27 @@ void Player::Movement(Event e)
 		//AWDS 
         case Keyboard::A:
             shape.move(-100, 0);
+			if (!music.openFromFile("MoveSound.ogg"))
+				return; // error
+			music.play();
             break;
         case Keyboard::W:
             shape.move(0, -100);
+			if (!music.openFromFile("MoveSound.ogg"))
+				return; // error
+			music.play();
             break;
         case Keyboard::D:
             shape.move(100, 0);
+			if (!music.openFromFile("MoveSound.ogg"))
+				return; // error
+			music.play();
             break;
         case Keyboard::S:
             shape.move(0, 100);
+			if (!music.openFromFile("MoveSound.ogg"))
+				return; // error
+			music.play();
             break;
 
 		//Up, Down, Left, Right mode
