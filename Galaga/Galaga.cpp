@@ -13,8 +13,9 @@ int main()
 	RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
 					//Videomode you can set size
 	window.setFramerateLimit(30);
-
+	
 	//Rate at which window updates
+
 	//sf::Music music;
 	//if (!music.openFromFile("Laser.ogg"))
 		//return -1; // error
