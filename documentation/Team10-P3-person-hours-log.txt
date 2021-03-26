@@ -12,6 +12,7 @@ hr total
 
 Brandon Lefert:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
+3/25: 2 hr - Research with movement and added in movement onto shape and close window with ESC
 
 hr total
 
