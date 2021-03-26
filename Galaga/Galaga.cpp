@@ -10,6 +10,7 @@ using namespace sf;
 
 int main()
 {
+	
     RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
                         //Videomode you can set size
     window.setFramerateLimit(30);
@@ -18,7 +19,6 @@ int main()
     Player p;
     while (window.isOpen()) {
         Event e;
-
 
        
 
@@ -48,6 +48,10 @@ int main()
         window.clear();
 
         window.draw(p.getShape());
+		//sf::CircleShape shape(50);
+		//shape.setFillColor(sf::Color(100, 250, 50));
+		//window.draw(shape);
+		
 
         //Displays the new frame
         window.display();

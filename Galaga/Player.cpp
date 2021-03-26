@@ -17,6 +17,7 @@ void Player::Movement(Event e)
 {
         switch (e.key.code)
         {
+		//AWDS 
         case Keyboard::A:
             shape.move(-100, 0);
             break;
@@ -29,7 +30,22 @@ void Player::Movement(Event e)
         case Keyboard::S:
             shape.move(0, 100);
             break;
+
+		//Up, Down, Left, Right mode
+		case Keyboard::Left:
+			shape.move(-100, 0);
+			break;
+		case Keyboard::Up:
+			shape.move(0, -100);
+			break;
+		case Keyboard::Right:
+			shape.move(100, 0);
+			break;
+		case Keyboard::Down:
+			shape.move(0, 100);
+			break;
         }
+
 }
 
 CircleShape Player::getShape()
