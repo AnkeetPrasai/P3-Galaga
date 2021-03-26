@@ -10,7 +10,16 @@ using namespace sf;
 
 int main()
 {
+	//sf::Music music;
+	//if (!music.openFromFile("Laser.ogg"))
+		//return -1; // error
+	//music.play();
 	
+	sf::Music music;
+	if (!music.openFromFile("GalagaTheme.ogg"))
+		return -1; // error
+	music.play();
+
     RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
                         //Videomode you can set size
     window.setFramerateLimit(30);
@@ -19,6 +28,8 @@ int main()
     Player p;
     while (window.isOpen()) {
         Event e;
+
+	
 
        
 
@@ -55,6 +66,7 @@ int main()
 
         //Displays the new frame
         window.display();
+	
     }
     std::cout << "Hello World!\n";
 
