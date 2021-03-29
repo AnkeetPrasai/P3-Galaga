@@ -51,7 +51,6 @@ int main()
             for (int i = 0; i < p.getProjectiles().size(); i++)
             {
                 p.updateProjectiles(i);
-               
             }
 
             display.window.draw(p.getShape());

@@ -33,6 +33,5 @@ class Player
 		CircleShape shape;
 		CircleShape projectile;
 		std::vector<CircleShape> projectiles;
-		Vector2f bounds;
 };
 #endif

@@ -5,10 +5,10 @@ Display display;
 Player::Player()
 {
     shape.setRadius(50.f);
+	shape.setPointCount(3);
+	shape.setPosition(display.window.getSize().x / 2, display.window.getSize().y / 2);
 	projectile.setRadius(10.f);
     lives = 3;
-    bounds.x = 1280;
-    bounds.y = 720;
 }
 
 Player::~Player()
@@ -70,7 +70,7 @@ CircleShape Player::getShape()
 
 void Player::Shoot()
 {
-	projectile.setPosition(shape.getPosition());
+	projectile.setPosition(shape.getPosition().x + 40, shape.getPosition().y + shape.getRadius());
 	projectiles.push_back(CircleShape(projectile));
 }
 
