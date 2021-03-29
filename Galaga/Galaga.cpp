@@ -21,7 +21,7 @@ int main()
         Event e;
 
         // Checks for any input from user and it send it to event handler
-        while (display.window.pollEvent(e))
+        while (display.window.pollEvent(e)||1)
         {
             if (e.type == Event::KeyPressed)
             {
