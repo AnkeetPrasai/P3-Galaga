@@ -17,6 +17,5 @@ class Display
 		Display();
 		~Display();
 		RenderWindow window;
-
 };
 #endif

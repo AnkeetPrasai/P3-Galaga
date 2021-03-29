@@ -16,6 +16,9 @@ class Enemy
 public:
 	Enemy();
 	~Enemy();
+	void Shoot();
+	void updateProjectiles(int);
+	std::vector<CircleShape> getProjectiles();
 
 private:
 	CircleShape shape;
