@@ -22,25 +22,25 @@ void Player::Movement(Event e)
         {
 		//AWDS 
         case Keyboard::A:
-            shape.move(-100, 0);
+            shape.move(-40, 0);
 			if (!music.openFromFile("MoveSound.ogg"))
 				return; // error
 			music.play();
             break;
         case Keyboard::W:
-            shape.move(0, -100);
+            shape.move(0, -40);
 			if (!music.openFromFile("MoveSound.ogg"))
 				return; // error
 			music.play();
             break;
         case Keyboard::D:
-            shape.move(100, 0);
+            shape.move(40, 0);
 			if (!music.openFromFile("MoveSound.ogg"))
 				return; // error
 			music.play();
             break;
         case Keyboard::S:
-            shape.move(0, 100);
+            shape.move(0, 40);
 			if (!music.openFromFile("MoveSound.ogg"))
 				return; // error
 			music.play();
@@ -48,16 +48,16 @@ void Player::Movement(Event e)
 
 		//Up, Down, Left, Right mode
 		case Keyboard::Left:
-			shape.move(-100, 0);
+			shape.move(-40, 0);
 			break;
 		case Keyboard::Up:
-			shape.move(0, -100);
+			shape.move(0, -40);
 			break;
 		case Keyboard::Right:
-			shape.move(100, 0);
+			shape.move(40, 0);
 			break;
 		case Keyboard::Down:
-			shape.move(0, 100);
+			shape.move(0, 40);
 			break;
         }
 

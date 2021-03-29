@@ -18,7 +18,7 @@ void Enemy::Shoot()
 
 void Enemy::updateProjectiles(int i)
 {
-	projectiles[i].move(0, -10.f);
+	projectiles[i].move(0, 10.f);
 	if (projectiles[i].getPosition().y < 0)
 	{
 		projectiles.erase(projectiles.begin());
