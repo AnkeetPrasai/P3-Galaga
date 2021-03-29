@@ -5,6 +5,7 @@ Display display;
 Player::Player()
 {
     shape.setRadius(50.f);
+	projectile.setRadius(10.f);
     lives = 3;
     bounds.x = 1280;
     bounds.y = 720;
@@ -67,15 +68,22 @@ CircleShape Player::getShape()
     return shape;
 }
 
-void Player::Shoot(Event e)
+void Player::Shoot()
 {
-    CircleShape projectile(50.f);
-    projectile.setPosition(shape.getPosition());
-    display.window.draw(projectile);
-    FloatRect boundingBox = projectile.getGlobalBounds();
-    while (boundingBox.contains(bounds) != true)
-    {
-        projectile.move(0, 200);
-        display.window.draw(projectile);
-    }
+	projectile.setPosition(shape.getPosition());
+	projectiles.push_back(CircleShape(projectile));
+}
+
+void Player::updateProjectiles(int i)
+{
+	projectiles[i].move(0, -10.f);
+	if (projectiles[i].getPosition().y < 0)
+	{
+		projectiles.erase(projectiles.begin());
+	}
+}
+
+std::vector<CircleShape> Player::getProjectiles()
+{
+	return projectiles;
 }

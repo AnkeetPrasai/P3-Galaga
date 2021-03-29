@@ -10,6 +10,7 @@ using namespace sf;
 
 int main()
 {
+    sf::Music music;
     if (!music.openFromFile("GalagaTheme.ogg"))
         return -1; // error
     music.play();
@@ -27,7 +28,7 @@ int main()
             {
                 if (e.key.code == Keyboard::Space)
                 {
-                    p.Shoot(e);
+                    p.Shoot();
                 }
                 else if (e.key.code == Keyboard::Escape)
                 {
@@ -47,7 +48,18 @@ int main()
             //Clears the window
             display.window.clear();
 
+            for (int i = 0; i < p.getProjectiles().size(); i++)
+            {
+                p.updateProjectiles(i);
+               
+            }
+
             display.window.draw(p.getShape());
+            
+            for (int i = 0; i < p.getProjectiles().size(); i++)
+            {
+                display.window.draw(p.getProjectiles()[i]);
+            }
             //sf::CircleShape shape(50);
             //shape.setFillColor(sf::Color(100, 250, 50));
             //window.draw(shape);
