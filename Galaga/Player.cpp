@@ -1,6 +1,6 @@
 #include "Player.h"
-sf::Music music;
-
+#include "Display.h"
+Display display;
 
 Player::Player()
 {
@@ -71,9 +71,11 @@ void Player::Shoot(Event e)
 {
     CircleShape projectile(50.f);
     projectile.setPosition(shape.getPosition());
+    display.window.draw(projectile);
     FloatRect boundingBox = projectile.getGlobalBounds();
     while (boundingBox.contains(bounds) != true)
     {
         projectile.move(0, 200);
+        display.window.draw(projectile);
     }
 }

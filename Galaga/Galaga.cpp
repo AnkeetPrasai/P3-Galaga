@@ -10,29 +10,19 @@ using namespace sf;
 
 int main()
 {
-	RenderWindow window(VideoMode(1280, 720), "GALAGA", Style::Default); //style chooses between windowed and fullscreen
-					//Videomode you can set size
-	window.setFramerateLimit(30);
-	
-	//Rate at which window updates
-
-	//sf::Music music;
-	//if (!music.openFromFile("Laser.ogg"))
-		//return -1; // error
-	//music.play();
-	
-	sf::Music music;
-	if (!music.openFromFile("GalagaTheme.ogg"))
-		return -1; // error
-	music.play();
+    if (!music.openFromFile("GalagaTheme.ogg"))
+        return -1; // error
+    music.play();
 
 
     Player p;
-    while (window.isOpen()) {
-        Event e;       
+    while (display.window.isOpen())
+    {
+        Event e;
 
-                    // Checks for any input from user and it send it to event handler
-        while (window.pollEvent(e)) {
+        // Checks for any input from user and it send it to event handler
+        while (display.window.pollEvent(e))
+        {
             if (e.type == Event::KeyPressed)
             {
                 if (e.key.code == Keyboard::Space)
@@ -41,7 +31,7 @@ int main()
                 }
                 else if (e.key.code == Keyboard::Escape)
                 {
-                    window.close();
+                    display.window.close();
                 }
                 else
                 {
@@ -49,24 +39,28 @@ int main()
                 }
             }
             if (e.type == Event::Closed)
-                window.close();
+            {
 
-        }
+                display.window.close();
+            }
 
-        //Clears the window
-        window.clear();
+            //Clears the window
+            display.window.clear();
 
-        window.draw(p.getShape());
-		//sf::CircleShape shape(50);
-		//shape.setFillColor(sf::Color(100, 250, 50));
-		//window.draw(shape);
-		
+            display.window.draw(p.getShape());
+            //sf::CircleShape shape(50);
+            //shape.setFillColor(sf::Color(100, 250, 50));
+            //window.draw(shape);
 
-        //Displays the new frame
-        window.display();
-	
+
+            //Displays the new frame
+            display.window.display();
+        }   
+
+
+        std::cout << "Hello World!\n";
+
+        return 0;
     }
-    std::cout << "Hello World!\n";
-
-    return 0;
 }
+    

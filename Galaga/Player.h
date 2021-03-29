@@ -4,8 +4,10 @@
 #include "SFML\Window.hpp"
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
+#include "Display.h"
 
 using namespace sf;
+extern Display display;
 
 #ifndef Player_H
 #define Player_H
