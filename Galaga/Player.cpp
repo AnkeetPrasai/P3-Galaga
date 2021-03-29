@@ -61,6 +61,23 @@ void Player::Movement(Event e)
 			break;
         }
 
+		//Keeps track if the player ends up off the screen
+		if (shape.getPosition().x < 0)
+		{
+			shape.setPosition(1280, shape.getPosition().y); //Resets if the player goes off the left side
+		}
+		else if (shape.getPosition().x > 1280)
+		{
+			shape.setPosition(0, shape.getPosition().y); //Resets if the player goes off the right side
+		}
+		else if (shape.getPosition().y < 0)
+		{
+			shape.setPosition(shape.getPosition().x, 720); //Resets if the player goes off the top
+		}
+		else if (shape.getPosition().y > 720)
+		{
+			shape.setPosition(shape.getPosition().x, 0); //Resets if the player goes off the bottom
+		}
 }
 
 CircleShape Player::getShape()
