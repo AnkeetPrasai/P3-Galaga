@@ -10,6 +10,7 @@ using namespace sf;
 
 int main()
 {
+    int check = 1;
     sf::Music music;
     if (!music.openFromFile("GalagaTheme.ogg"))
         return -1; // error
@@ -22,7 +23,7 @@ int main()
         Event e;
 
         // Checks for any input from user and it send it to event handler
-        while (display.window.pollEvent(e)||1)
+        while (display.window.pollEvent(e)||check)
         {
             if (e.type == Event::KeyPressed)
             {
@@ -33,6 +34,7 @@ int main()
                 else if (e.key.code == Keyboard::Escape)
                 {
                     display.window.close();
+                    check = 0;
                 }
                 else
                 {
@@ -41,8 +43,8 @@ int main()
             }
             if (e.type == Event::Closed)
             {
-
                 display.window.close();
+                check = 0;
             }
 
             //Clears the window
