@@ -4,8 +4,12 @@
 #include "SFML\Window.hpp"
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
+#include "Display.h"
+
+#include <vector>
 
 using namespace sf;
+extern Display display;
 
 #ifndef Player_H
 #define Player_H
@@ -18,13 +22,16 @@ class Player
 		~Player();
 
 		void Movement(Event);
-		void Shoot(Event);
+		void Shoot();
 		void gameOver(Event);
 		CircleShape getShape();
+		void updateProjectiles(int);
+		std::vector<CircleShape> getProjectiles();
 		
 	private:
 		int lives;
 		CircleShape shape;
-		Vector2f bounds;
+		CircleShape projectile;
+		std::vector<CircleShape> projectiles;
 };
 #endif
