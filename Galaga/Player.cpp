@@ -1,12 +1,11 @@
 #include "Player.h"
-#include "Display.h"
 Display display;
 
 Player::Player()
 {
     shape.setRadius(20.f);
 	shape.setPointCount(3);
-	shape.setPosition(display.window.getSize().x / 2, display.window.getSize().y / 2);
+	shape.setPosition(display.window.getSize().x / 2, 700);
 	projectile.setRadius(5.f);
     lives = 3;
 }

@@ -5,7 +5,6 @@
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
 #include "Display.h"
-
 #include <vector>
 
 using namespace sf;

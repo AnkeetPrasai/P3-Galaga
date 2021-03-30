@@ -1,12 +1,8 @@
 #include <iostream>
-#include "SFML\System.hpp"
-#include "SFML\Graphics.hpp"
-#include "SFML\Window.hpp"
-#include "SFML\Audio.hpp"
-#include "SFML\Network.hpp"
 #include "Player.h"
-
+#include "Enemy.h"
 using namespace sf;
+using namespace std;
 
 int main()
 {
@@ -18,6 +14,12 @@ int main()
 
 
     Player p;
+    vector<Enemy> enemies;
+    for (int i = 0; i < 20; i++)
+    {
+        enemies.push_back(Enemy(i * 30 + 300));
+    }
+
     while (display.window.isOpen())
     {
         Event e;
@@ -47,6 +49,29 @@ int main()
                 check = 0;
             }
 
+            int selection = rand() % 20; //Randomly selects an enemy ship
+            int check = 0;
+            int previous;
+            for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
+            {
+                if (enemies[i].getShape().getPosition().y == 0)
+                {
+                    check++;
+                }
+                else
+                {
+                    previous = i;
+                }
+            }
+            if (check == enemies.size()) //If no enemy has moved, the randomly selected one moves
+            {
+                enemies[selection].move();
+            }
+            else //Otherwise the one that has moved continues moving
+            {
+                enemies[previous].move();
+            }
+
             //Clears the window
             display.window.clear();
 
@@ -60,6 +85,11 @@ int main()
             for (int i = 0; i < p.getProjectiles().size(); i++)
             {
                 display.window.draw(p.getProjectiles()[i]);
+            }
+
+            for (int i = 0; i < enemies.size(); i++)
+            {
+                display.window.draw(enemies[i].getShape());
             }
             //sf::CircleShape shape(50);
             //shape.setFillColor(sf::Color(100, 250, 50));

@@ -1,8 +1,10 @@
 #include "Enemy.h"
 
-Enemy::Enemy()
+Enemy::Enemy(int pos)
 {
 	shape.setRadius(10.f);
+	shape.setPosition(pos, 0);
+	position = pos;
 }
 
 Enemy::~Enemy()
@@ -25,7 +27,21 @@ void Enemy::updateProjectiles(int i)
 	}
 }
 
+CircleShape Enemy::getShape()
+{
+	return shape;
+}
+
 std::vector<CircleShape> Enemy::getProjectiles()
 {
 	return projectiles;
+}
+
+void Enemy::move()
+{
+	shape.move(0, 10.f);
+	if (shape.getPosition().y > 720)
+	{
+		shape.setPosition(position, 0);
+	}
 }
