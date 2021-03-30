@@ -234,3 +234,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+Galaga/.vs/Galaga/v16/.suo
+Galaga/.vs/Galaga/v16/Browse.VC.db
