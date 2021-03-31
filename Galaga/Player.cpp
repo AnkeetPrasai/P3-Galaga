@@ -19,7 +19,7 @@ void Player::Movement(Event e)
 {
         switch (e.key.code)
         {
-		//AWDS 
+		//AWDS
         case Keyboard::A:
             shape.move(-40, 0);
 			if (!music.openFromFile("MoveSound.ogg"))
