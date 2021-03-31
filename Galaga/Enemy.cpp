@@ -45,3 +45,8 @@ void Enemy::move()
 		shape.setPosition(position, 0);
 	}
 }
+
+int Enemy::getPosition()
+{
+	return position;
+}

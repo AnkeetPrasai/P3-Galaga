@@ -5,7 +5,9 @@
 #include "SFML\Audio.hpp"
 #include "SFML\Network.hpp"
 #include "Display.h"
+#include "Enemy.h"
 #include <vector>
+
 
 using namespace sf;
 extern Display display;
@@ -24,8 +26,9 @@ class Player
 		void Shoot();
 		void gameOver(Event);
 		CircleShape getShape();
-		void updateProjectiles(int);
+		void updateProjectiles(int, std::vector<Enemy>&);
 		std::vector<CircleShape> getProjectiles();
+		bool checkCollison(Enemy);
 		
 	private:
 		int lives;
