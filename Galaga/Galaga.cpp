@@ -84,7 +84,7 @@ int main()
             // display.window.draw(sprite1);
             // display.window.display();
 
-            int selection = rand() % 20; //Randomly selects an enemy ship
+            int selection = rand() % enemies.size(); //Randomly selects an enemy ship
             int check = 0;
             int previous = 0;
             for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
@@ -104,24 +104,24 @@ int main()
             }
             else //Otherwise the one that has moved continues moving
             {
-                enemies[previous].move();
+                    enemies[previous].move(); 
             }
             //Clears the window
             display.window.clear();
 
-            for (int i = 0; i < p.getProjectiles().size(); i++)
+            for (int i = 0; i < p.getProjectiles().size(); i++) //Updates the projectiles with there new position
             {
                 p.updateProjectiles(i, enemies);
             }
 
-            display.window.draw(p.getShape());
+            display.window.draw(p.getShape()); //Draws the player on the screen
 
-            for (int i = 0; i < p.getProjectiles().size(); i++)
+            for (int i = 0; i < p.getProjectiles().size(); i++) //Draws the player's projectiles on the screen
             {
                 display.window.draw(p.getProjectiles()[i]);
             }
 
-            for (int i = 0; i < enemies.size(); i++)
+            for (int i = 0; i < enemies.size(); i++) //Draws the enemies on the screen
             {
                 display.window.draw(enemies[i].getShape());
             }
@@ -133,9 +133,9 @@ int main()
 
             //Displays the new frame
             display.window.display();
-            if (p.checkCollison(enemies[previous]))
+            for (int i = 0; i < enemies.size(); i++)
             {
-
+                p.checkCollison(enemies[i]);
             }
         }
 

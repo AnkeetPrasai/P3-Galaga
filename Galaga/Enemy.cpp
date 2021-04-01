@@ -39,7 +39,7 @@ std::vector<CircleShape> Enemy::getProjectiles()
 
 void Enemy::move()
 {
-	shape.move(0, 10.f);
+	shape.move(0, 5.f);
 	if (shape.getPosition().y > 720)
 	{
 		shape.setPosition(position, 0);

@@ -3,7 +3,7 @@ sf::Music music;
 
 Display::Display():window(VideoMode(1280, 720), "GALAGA", Style::Default)
 {
-	window.setFramerateLimit(30);
+	window.setFramerateLimit(60);
 }
 
 Display::~Display()
