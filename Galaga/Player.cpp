@@ -127,3 +127,8 @@ bool Player::checkCollison(Enemy e)
 	}
 	return collison;
 }
+
+bool Player::gameOver()
+{
+	return (lives == 0);
+}

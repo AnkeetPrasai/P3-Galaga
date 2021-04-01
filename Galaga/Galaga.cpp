@@ -56,6 +56,11 @@ int main()
                 display.window.close();
                 check = 0;
             }
+            if (p.gameOver())
+            {
+                display.window.close();
+                check = 0;
+            }
 
             // display.window.clear(sf::Color::Black);
             // sf::Image image1;

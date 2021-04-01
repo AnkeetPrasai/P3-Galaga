@@ -24,7 +24,7 @@ class Player
 
 		void Movement(Event);
 		void Shoot();
-		void gameOver(Event);
+		bool gameOver();
 		CircleShape getShape();
 		void updateProjectiles(int, std::vector<Enemy>&);
 		std::vector<CircleShape> getProjectiles();
