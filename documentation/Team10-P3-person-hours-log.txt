@@ -3,6 +3,8 @@ Alex Wilhelm:
 3/19: 0.75 hr - Idea Drafting
 3/23: 1 hr - Approval Request, Starting initial documentation files
 3/26: 2 hr - Setting up git, researching SMFL, adding music-sound effects, using arrows to move, updating hour estimate
+3/28: 0.5 hr - Progress meeting
+3/30: 1.75 hr - Learning and working with pixels, beginning of main screen implementation, sounds and images added
 
 2.25 hr total
 

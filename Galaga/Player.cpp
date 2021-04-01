@@ -90,9 +90,18 @@ void Player::Shoot()
 	projectiles.push_back(CircleShape(projectile));
 }
 
-void Player::updateProjectiles(int i)
+void Player::updateProjectiles(int i, std::vector<Enemy> &e)
 {
 	projectiles[i].move(0, -10.f);
+	Rect<float> p(projectiles[i].getPosition().x, projectiles[i].getPosition().y, 10.f, 10.f);
+	for (int j = 0; j < e.size(); j++)
+	{
+		Rect<float> en(e[j].getShape().getPosition().x, e[j].getShape().getPosition().y, 10.f, 10.f);
+		if (p.intersects(en))
+		{
+			e.erase(e.begin() + j);
+		}
+	}
 	if (projectiles[i].getPosition().y < 0)
 	{
 		projectiles.erase(projectiles.begin());
@@ -102,4 +111,19 @@ void Player::updateProjectiles(int i)
 std::vector<CircleShape> Player::getProjectiles()
 {
 	return projectiles;
+}
+
+bool Player::checkCollison(Enemy e)
+{
+	bool collison = false;
+	Rect<float> p(shape.getPosition().x, shape.getPosition().y, 40.f, 40.f);
+	Rect<float> en(e.getShape().getPosition().x, e.getShape().getPosition().y, 10.f, 10.f);
+	if (p.intersects(en))
+	{
+		lives--;
+		shape.setPosition(display.window.getSize().x / 2, 700);
+		e.getShape().setPosition(e.getPosition(), 0);
+		collison = true;
+	}
+	return collison;
 }

@@ -86,7 +86,7 @@ int main()
 
             int selection = rand() % 20; //Randomly selects an enemy ship
             int check = 0;
-            int previous;
+            int previous = 0;
             for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
             {
                 if (enemies[i].getShape().getPosition().y == 0)
@@ -106,13 +106,12 @@ int main()
             {
                 enemies[previous].move();
             }
-
             //Clears the window
             display.window.clear();
 
             for (int i = 0; i < p.getProjectiles().size(); i++)
             {
-                p.updateProjectiles(i);
+                p.updateProjectiles(i, enemies);
             }
 
             display.window.draw(p.getShape());
@@ -126,6 +125,7 @@ int main()
             {
                 display.window.draw(enemies[i].getShape());
             }
+
             //sf::CircleShape shape(50);
             //shape.setFillColor(sf::Color(100, 250, 50));
             //window.draw(shape);
@@ -133,6 +133,10 @@ int main()
 
             //Displays the new frame
             display.window.display();
+            if (p.checkCollison(enemies[previous]))
+            {
+
+            }
         }
 
 
