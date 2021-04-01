@@ -61,7 +61,12 @@ int main()
                 display.window.close();
                 check = 0;
             }
-
+            if (enemies.size() == 0)
+            {
+                display.window.close();
+                check = 0;
+            }
+            
             // display.window.clear(sf::Color::Black);
             // sf::Image image1;
             // image1.create(1280 , 720);//1280 , 720
