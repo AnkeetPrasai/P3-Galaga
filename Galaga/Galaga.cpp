@@ -29,9 +29,11 @@ void StartScreen()
   // }
   sf::Texture galagaLogo;
   sf::Sprite galagaScreen;
+  galagaScreen.setPosition(display.window.getSize().x / 2 - 400, display.window.getSize().y / 2 - 200);
 
   sf::Texture pushSpaceKey;
   sf::Sprite spaceKeyScreen;
+  spaceKeyScreen.setPosition(display.window.getSize().x / 2, display.window.getSize().y / 2 + 250);
 
 
   if (!galagaLogo.loadFromFile("GalagaLogo.png"))
@@ -79,6 +81,7 @@ void EndScreen()
 {
   sf::Texture GameOver;
   sf::Sprite EndScreen;
+  EndScreen.setPosition(display.window.getSize().x / 2 - 100, display.window.getSize().y / 2 - 100);
 
   if (!music.openFromFile("gameOverSound.ogg"))
   {
@@ -119,6 +122,7 @@ void WinScreen()
 {
   sf::Texture Win;
   sf::Sprite WinScreen;
+  WinScreen.setPosition(display.window.getSize().x / 2 - 200, display.window.getSize().y / 2 - 200);
 
   if (!music.openFromFile("winSound.ogg"))
   {
