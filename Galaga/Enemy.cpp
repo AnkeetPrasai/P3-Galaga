@@ -1,10 +1,11 @@
 #include "Enemy.h"
 
-Enemy::Enemy(int pos)
+Enemy::Enemy(int x, int y)
 {
 	shape.setRadius(10.f);
-	shape.setPosition(pos, 0);
-	position = pos;
+	shape.setPosition(x, y);
+	startX = x;
+	startY = y;
 }
 
 Enemy::~Enemy()
@@ -42,11 +43,23 @@ void Enemy::move()
 	shape.move(0, 5.f);
 	if (shape.getPosition().y > 720)
 	{
-		shape.setPosition(position, 0);
+		shape.setPosition(startX, 0);
 	}
 }
 
 int Enemy::getPosition()
 {
-	return position;
+	return startX;
+}
+
+void Enemy::backAndForth(bool left)
+{
+	if (left == true)
+	{
+		shape.move(-2.f, 0);
+	}
+	else
+	{
+		shape.move(2.f, 0);
+	}
 }
