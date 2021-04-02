@@ -161,8 +161,40 @@ void WinScreen()
 
 void Play()
 {
+<<<<<<< HEAD
   int test = 0;
   do
+=======
+   Texture scoreLogo;
+   Sprite scoreSprite;
+   if (!scoreLogo.loadFromFile("score.png"))
+   {
+       return -1;
+   }
+   scoreSprite.setTexture(scoreLogo);
+   scoreSprite.setPosition(0, 700);
+
+   Texture livesTexture;
+   vector<Sprite> lives;
+   if (!livesTexture.loadFromFile("galagaShip.png"))
+   {
+       return -1;
+   }
+
+  int check = 1;
+  Text score;
+  Font font;
+  if (!font.loadFromFile("Dream MMA.ttf"))
+  {
+      return -1;
+  }
+  score.setStyle(Text::Bold);
+  score.setFont(font);
+  score.setPosition(125, 690);
+
+  sf::Music music;
+  if (!music.openFromFile("GalagaTheme.ogg"))
+>>>>>>> 7ba29f598a4ee4bbb18a59282e8d93f3b175a7e5
   {
     display.window.clear();
     int check1 = 1;
@@ -183,6 +215,7 @@ void Play()
     StartScreen();
     music.stop();
 
+<<<<<<< HEAD
       Player p;
       vector<Enemy> enemies;
       for (int i = 0; i < 20; i++)
@@ -206,6 +239,34 @@ void Play()
               if (e.type == Event::KeyPressed)
               {
                   if (e.key.code == Keyboard::Space)
+=======
+    for (int i = 0; i < p.getLives(); i++)
+    {
+        lives.push_back(Sprite(livesTexture));
+        lives[i].setPosition(1100 + (i*50), 680);
+    }
+
+    int time = 0;
+    bool left = false;
+    string scoreDisplay;
+    while (display.window.isOpen())
+    {
+        Event e;
+        // Checks for any input from user and it send it to event handler
+        while (display.window.pollEvent(e)||check)
+        {
+            scoreDisplay = to_string(p.getScore());
+            score.setString(scoreDisplay);
+            if (e.type == Event::KeyPressed)
+            {
+                if (e.key.code == Keyboard::Space)
+                {
+                  // if (e.key.code == Keyboard::Space && e.key.code == Keyboard::A)
+                  // {
+                  // p.Movement(e);
+                  p.Shoot();
+                  if (!music.openFromFile("Laser.ogg"))
+>>>>>>> 7ba29f598a4ee4bbb18a59282e8d93f3b175a7e5
                   {
                     // if (e.key.code == Keyboard::Space && e.key.code == Keyboard::A)
                     // {
@@ -329,7 +390,17 @@ void Play()
                   }
               }
 
+<<<<<<< HEAD
               display.window.draw(score);
+=======
+            display.window.draw(score);
+            display.window.draw(scoreSprite);
+
+            for (int i = 0; i < p.getLives(); i++)
+            {
+                display.window.draw(lives[i]);
+            }
+>>>>>>> 7ba29f598a4ee4bbb18a59282e8d93f3b175a7e5
 
               //Displays the new frame
               display.window.display();

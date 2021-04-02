@@ -79,7 +79,19 @@ class Player
 		*/
 		bool checkCollison(Enemy&);
 
+		/*
+		* Returns the score of the player
+		* @parm Nothing
+		* @parm int - Returns the value of the player's score
+		*/
 		int getScore();
+
+		/*
+		* Returns the number of lives the player has
+		* @parm Nothing
+		* @parm int - Returns the number of lives the player has
+		*/
+		int getLives();
 		
 	private:
 		/** The total number of lives the player has **/
@@ -94,6 +106,7 @@ class Player
 		/** The vector containing all of the projectiles the player has shot **/
 		std::vector<CircleShape> projectiles;
 
+		/** The score that the player has **/
 		int score;
 };
 #endif

@@ -309,3 +309,8 @@ int Player::getScore()
 {
 	return score;
 }
+
+int Player::getLives()
+{
+	return lives;
+}
