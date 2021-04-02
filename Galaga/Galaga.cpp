@@ -170,6 +170,13 @@ int main()
    scoreSprite.setTexture(scoreLogo);
    scoreSprite.setPosition(0, 700);
 
+   Texture livesTexture;
+   vector<Sprite> lives;
+   if (!livesTexture.loadFromFile("galagaShip.png"))
+   {
+       return -1;
+   }
+
   int check = 1;
   Text score;
   Font font;
@@ -195,6 +202,12 @@ int main()
     for (int i = 0; i < 20; i++)
     {
         enemies.push_back(Enemy(i * 30 + 300, 0));
+    }
+
+    for (int i = 0; i < p.getLives(); i++)
+    {
+        lives.push_back(Sprite(livesTexture));
+        lives[i].setPosition(1100 + (i*50), 680);
     }
 
     int time = 0;
@@ -335,6 +348,11 @@ int main()
 
             display.window.draw(score);
             display.window.draw(scoreSprite);
+
+            for (int i = 0; i < p.getLives(); i++)
+            {
+                display.window.draw(lives[i]);
+            }
 
             //Displays the new frame
             display.window.display();

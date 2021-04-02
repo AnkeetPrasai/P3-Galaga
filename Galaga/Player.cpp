@@ -6,8 +6,6 @@ Player::Player()
     shape.setRadius(20.f);
 	shape.setPointCount(3);
 	shape.setPosition(display.window.getSize().x / 2, 680);
-	image.loadFromFile("galagaShip.png");
-	shape.setTexture(&image);
 	projectile.setRadius(5.f);
     projectile.setFillColor(sf::Color::Red);
 
@@ -310,4 +308,9 @@ bool Player::gameOver()
 int Player::getScore()
 {
 	return score;
+}
+
+int Player::getLives()
+{
+	return lives;
 }
