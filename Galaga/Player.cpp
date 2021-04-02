@@ -285,8 +285,8 @@ bool Player::checkCollison(Enemy &e)
 		if (p.intersects(pro))
 		{
 			lives--;
-			shape.setPosition(display.window.getSize().x / 2, 680);
 			e.getShape().setPosition(e.getPosition(), 0);
+			shape.setPosition(display.window.getSize().x / 2, 680);
 			collison = true;
 		}
 	}
