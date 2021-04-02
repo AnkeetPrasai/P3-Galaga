@@ -4,18 +4,88 @@
 using namespace sf;
 using namespace std;
 
+void StartScreen()
+{
+  // display.window.clear(sf::Color::Black);
+  // sf::Image image1;
+  // image1.create(1280 , 720);//1280 , 720
+  // for (int i = 0; i < 1280; i++)
+  // {
+  //   for (int j = 0; j < 720; j++)
+  //   {
+  //   //  if (i % 30 == 0 || j % 30 == 0)
+  //   //  {
+  //   //    image1.setPixel(i,j, sf::Color::Red);
+  //   //    }
+  //   if (i > 256 && i < 1024 && j > 100 && j < 360)
+  //   {
+  //       image1.setPixel(i,j, sf::Color::Magenta);
+  //   }
+  //     else
+  //     {
+  //     image1.setPixel(i,j, sf::Color::Black);
+  //     }
+  //   }
+  // }
+  sf::Texture galagaLogo;
+  sf::Sprite galagaScreen;
+
+  sf::Texture pushSpaceKey;
+  sf::Sprite spaceKeyScreen;
+
+
+  if (!galagaLogo.loadFromFile("GalagaLogo.png"))
+  {
+    cout << "Could not load Galaga image";
+  }
+
+  galagaScreen.setTexture(galagaLogo);
+
+  if (!pushSpaceKey.loadFromFile("pushSpaceKey.jpg"))
+  {
+    cout << "Could not load push space key image";
+  }
+  spaceKeyScreen.setTexture(pushSpaceKey);
+
+
+  // sf::Texture texture1;
+  // texture1.loadFromImage(image1);
+  // sf::Sprite sprite1(texture1);
+  display.window.draw(galagaScreen);
+  display.window.draw(spaceKeyScreen);
+  // display.window.draw(sprite1);
+
+  display.window.display();
+
+  while (display.window.isOpen())
+  {
+      Event e;
+      // Checks for any input from user and it send it to event handler
+      while (display.window.pollEvent(e))
+      {
+          if (e.type == Event::KeyPressed)
+          {
+            if (e.key.code == Keyboard::Space)
+            {
+              display.window.clear();
+              return;
+            }
+          }
+      }
+  }
+}
+
 int main()
 {
   int check = 1;
-
   sf::Music music;
   if (!music.openFromFile("GalagaTheme.ogg"))
   {
       return -1; // error
   }
   music.play();
-
-  // void StartScreen();
+  StartScreen();
+  music.stop();
 
     Player p;
     vector<Enemy> enemies;
@@ -68,33 +138,6 @@ int main()
                 display.window.close();
                 check = 0;
             }
-            
-            // display.window.clear(sf::Color::Black);
-            // sf::Image image1;
-            // image1.create(1280 , 720);//1280 , 720
-            // for (int i = 0; i < 1280; i++)
-            // {
-            //   for (int j = 0; j < 720; j++)
-            //   {
-            //   //  if (i % 30 == 0 || j % 30 == 0)
-            //   //  {
-            //   //    image1.setPixel(i,j, sf::Color::Red);
-            //   //    }
-            //   if (i > 256 && i < 1024 && j > 100 && j < 360)
-            //   {
-            //       image1.setPixel(i,j, sf::Color::Magenta);
-            //   }
-            //     else
-            //     {
-            //     image1.setPixel(i,j, sf::Color::Black);
-            //     }
-            //   }
-            // }
-            // sf::Texture texture1;
-            // texture1.loadFromImage(image1);
-            // sf::Sprite sprite1(texture1);
-            // display.window.draw(sprite1);
-            // display.window.display();
 
             int selection = rand() % enemies.size(); //Randomly selects an enemy ship
             int check = 0;
@@ -116,7 +159,7 @@ int main()
             }
             else //Otherwise the one that has moved continues moving
             {
-                    enemies[previous].move(); 
+                    enemies[previous].move();
             }
             if (time == 0)
             {
@@ -174,9 +217,3 @@ int main()
         return 0;
     }
 }
-
-// void StartScreen()
-// {
-//   cout << "Test1";
-//
-// }
