@@ -1,7 +1,6 @@
 Works Cited
 
-
-Alex Wilhelm (to be updated)
+Alex Wilhelm 
 
 Laser Sound 
 https://bigsoundbank.com/detail-1758-star-wars-blaster-2.html
@@ -39,6 +38,9 @@ https://www.youtube.com/watch?v=5wjktyu8hWY
 
 Help With Playing Sounds
 https://www.sfml-dev.org/tutorials/2.5/audio-sounds.php
+
+Help With Pressing Multiple Keys Down At Once (from Jesper Juhl, Re: Detect multiple keypress « Reply #5 on: June 09, 2014, 09:49:10 pm »)
+https://en.sfml-dev.org/forums/index.php?topic=15477.0
 
 
 
