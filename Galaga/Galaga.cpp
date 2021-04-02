@@ -266,13 +266,33 @@ int main()
             {
                 time = 200;
                 left = false;
+                if (enemies.size() > 1)
+                {
+                    if (selection == enemies.size() - 1)
+                    {
+                        enemies[selection - 1].Shoot();
+                    }
+                    else
+                    {
+                        enemies[selection + 1].Shoot();
+                    }
+                }
             }
             //Clears the window
             display.window.clear();
 
-            for (int i = 0; i < p.getProjectiles().size(); i++) //Updates the projectiles with there new position
+            for (int i = 0; i < p.getProjectiles().size(); i++) //Updates the projectiles with their new positions
             {
                 p.updateProjectiles(i, enemies);
+            }
+
+            for (int i = 0; i < enemies.size(); i++)
+            {
+                for (int j = 0; j < enemies[i].getProjectiles().size(); j++)
+                {
+                    enemies[i].updateProjectiles(j);
+                    display.window.draw(enemies[i].getProjectiles()[j]);
+                }
             }
 
             display.window.draw(p.getShape()); //Draws the player on the screen
