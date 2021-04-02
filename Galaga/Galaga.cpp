@@ -164,10 +164,12 @@ int main()
   int check = 1;
   Text score;
   Font font;
-  //if (!font.loadFromFile())
+  if (!font.loadFromFile("Dream MMA.ttf"))
   {
- //     return -1;
+      return -1;
   }
+  score.setStyle(Text::Bold);
+  score.setFont(font);
 
   sf::Music music;
   if (!music.openFromFile("GalagaTheme.ogg"))
@@ -188,16 +190,14 @@ int main()
     int time = 0;
     bool left = false;
     string scoreDisplay;
-    score.setStyle(Text::Bold);
-    score.setFont(font);
     while (display.window.isOpen())
     {
-        scoreDisplay = to_string(p.getScore());
-        score.setString(scoreDisplay);
         Event e;
         // Checks for any input from user and it send it to event handler
         while (display.window.pollEvent(e)||check)
         {
+            scoreDisplay = to_string(p.getScore());
+            score.setString(scoreDisplay);
             if (e.type == Event::KeyPressed)
             {
                 if (e.key.code == Keyboard::Space)
