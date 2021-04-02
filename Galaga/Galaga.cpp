@@ -161,6 +161,15 @@ void WinScreen()
 
 int main()
 {
+   Texture scoreLogo;
+   Sprite scoreSprite;
+   if (!scoreLogo.loadFromFile("score.png"))
+   {
+       return -1;
+   }
+   scoreSprite.setTexture(scoreLogo);
+   scoreSprite.setPosition(0, 700);
+
   int check = 1;
   Text score;
   Font font;
@@ -170,6 +179,7 @@ int main()
   }
   score.setStyle(Text::Bold);
   score.setFont(font);
+  score.setPosition(125, 690);
 
   sf::Music music;
   if (!music.openFromFile("GalagaTheme.ogg"))
@@ -324,6 +334,7 @@ int main()
             }
 
             display.window.draw(score);
+            display.window.draw(scoreSprite);
 
             //Displays the new frame
             display.window.display();

@@ -95,5 +95,7 @@ class Player
 		std::vector<CircleShape> projectiles;
 
 		int score;
+
+		Texture image;
 };
 #endif
