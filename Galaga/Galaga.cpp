@@ -33,8 +33,8 @@ void StartScreen()
 
   sf::Texture pushSpaceKey;
   sf::Sprite spaceKeyScreen;
-  spaceKeyScreen.setPosition(display.window.getSize().x / 2, display.window.getSize().y / 2 + 250);
-
+  spaceKeyScreen.setPosition(display.window.getSize().x / 2 - 200, display.window.getSize().y / 2 + 250);
+  spaceKeyScreen.scale(2.f, 2.f);
 
   if (!galagaLogo.loadFromFile("GalagaLogo.png"))
   {
@@ -162,6 +162,13 @@ void WinScreen()
 int main()
 {
   int check = 1;
+  Text score;
+  Font font;
+  //if (!font.loadFromFile())
+  {
+ //     return -1;
+  }
+
   sf::Music music;
   if (!music.openFromFile("GalagaTheme.ogg"))
   {
@@ -180,8 +187,13 @@ int main()
 
     int time = 0;
     bool left = false;
+    string scoreDisplay;
+    score.setStyle(Text::Bold);
+    score.setFont(font);
     while (display.window.isOpen())
     {
+        scoreDisplay = to_string(p.getScore());
+        score.setString(scoreDisplay);
         Event e;
         // Checks for any input from user and it send it to event handler
         while (display.window.pollEvent(e)||check)
@@ -310,6 +322,8 @@ int main()
                     display.window.draw(enemies[i].getProjectiles()[j]);
                 }
             }
+
+            display.window.draw(score);
 
             //Displays the new frame
             display.window.display();

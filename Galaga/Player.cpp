@@ -10,6 +10,7 @@ Player::Player()
     projectile.setFillColor(sf::Color::Red);
 
     lives = 3;
+	score = 0;
 }
 
 Player::~Player()
@@ -259,6 +260,7 @@ void Player::updateProjectiles(int i, std::vector<Enemy> &e)
 		if (p.intersects(en))
 		{
 			e.erase(e.begin() + j);
+			score = score + 100;
 		}
 	}
 	if (projectiles[i].getPosition().y < 0)
@@ -301,4 +303,9 @@ bool Player::checkCollison(Enemy &e)
 bool Player::gameOver()
 {
 	return (lives == 0);
+}
+
+int Player::getScore()
+{
+	return score;
 }

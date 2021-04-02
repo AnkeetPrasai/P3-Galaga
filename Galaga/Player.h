@@ -78,6 +78,8 @@ class Player
 		* @parm bool - Returns true if the player is hit
 		*/
 		bool checkCollison(Enemy&);
+
+		int getScore();
 		
 	private:
 		/** The total number of lives the player has **/
@@ -91,5 +93,7 @@ class Player
 
 		/** The vector containing all of the projectiles the player has shot **/
 		std::vector<CircleShape> projectiles;
+
+		int score;
 };
 #endif
