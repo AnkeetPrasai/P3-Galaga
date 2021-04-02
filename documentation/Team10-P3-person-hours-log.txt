@@ -6,8 +6,8 @@ Alex Wilhelm:
 3/28: 0.5 hr - Progress meeting
 3/30: 1.75 hr - Learning and working with pixels, beginning of main screen implementation, sounds and images added
 4/1: 6.5 hr - Design Patterns Essay, Design Paradigm Analysis Essay, Architecture Analysis Essay, Massive UI overhau, and Keyboard Work
-
-2.25 hr total
+4/2: 3.5 hr - Made game restart after end. Added new images. Bug fix/trial & error.
+18.25 hr total
 
 Ankeey Prasai:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
