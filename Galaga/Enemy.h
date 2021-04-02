@@ -12,7 +12,7 @@ using namespace sf;
 class Enemy
 {
 public:
-	Enemy(int);
+	Enemy(int, int);
 	~Enemy();
 	void Shoot();
 	void updateProjectiles(int);
@@ -20,11 +20,12 @@ public:
 	CircleShape getShape();
 	void move();
 	int getPosition();
+	void backAndForth(bool);
 
 private:
 	CircleShape shape;
 	CircleShape projectile;
 	std::vector<CircleShape> projectiles;
-	int position;
+	int startX, startY;
 };
 #endif

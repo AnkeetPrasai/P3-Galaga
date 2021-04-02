@@ -21,9 +21,11 @@ int main()
     vector<Enemy> enemies;
     for (int i = 0; i < 20; i++)
     {
-        enemies.push_back(Enemy(i * 30 + 300));
+        enemies.push_back(Enemy(i * 30 + 300, 0));
     }
 
+    int time = 0;
+    bool left = false;
     while (display.window.isOpen())
     {
         Event e;
@@ -115,6 +117,23 @@ int main()
             else //Otherwise the one that has moved continues moving
             {
                     enemies[previous].move(); 
+            }
+            if (time == 0)
+            {
+                left = true;
+            }
+            else
+            {
+                time--;
+            }
+            for (int i = 0; i < enemies.size(); i++)
+            {
+                enemies[i].backAndForth(left);
+            }
+            if (enemies[0].getShape().getPosition().x < 100 && time == 0)
+            {
+                time = 200;
+                left = false;
             }
             //Clears the window
             display.window.clear();
