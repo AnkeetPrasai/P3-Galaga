@@ -272,7 +272,7 @@ std::vector<CircleShape> Player::getProjectiles()
 	return projectiles;
 }
 
-bool Player::checkCollison(Enemy e)
+bool Player::checkCollison(Enemy &e)
 {
 	bool collison = false;
 	Rect<float> p(shape.getPosition().x, shape.getPosition().y, 40.f, 40.f);
