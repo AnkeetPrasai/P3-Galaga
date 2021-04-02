@@ -29,9 +29,11 @@ void StartScreen()
   // }
   sf::Texture galagaLogo;
   sf::Sprite galagaScreen;
+  galagaScreen.setPosition(display.window.getSize().x / 2 - 400, display.window.getSize().y / 2 - 200);
 
   sf::Texture pushSpaceKey;
   sf::Sprite spaceKeyScreen;
+  spaceKeyScreen.setPosition(display.window.getSize().x / 2, display.window.getSize().y / 2 + 250);
 
 
   if (!galagaLogo.loadFromFile("GalagaLogo.png"))
@@ -79,6 +81,7 @@ void EndScreen()
 {
   sf::Texture GameOver;
   sf::Sprite EndScreen;
+  EndScreen.setPosition(display.window.getSize().x / 2 - 100, display.window.getSize().y / 2 - 100);
 
   if (!music.openFromFile("gameOverSound.ogg"))
   {
@@ -119,6 +122,7 @@ void WinScreen()
 {
   sf::Texture Win;
   sf::Sprite WinScreen;
+  WinScreen.setPosition(display.window.getSize().x / 2 - 200, display.window.getSize().y / 2 - 200);
 
   if (!music.openFromFile("winSound.ogg"))
   {
@@ -224,13 +228,15 @@ int main()
             }
 
             int selection = 0;
-            if (enemies.size() == 0)
+            int random = 0;
+            if (enemies.size() == 0) // Breaks out of the loop if the player wins
             {
                 break;
             }
             int check = 0;
             int previous = 0;
             selection = rand() % enemies.size(); //Randomly selects an enemy ship
+            random = rand() % enemies.size();
             for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
             {
                 if (enemies[i].getShape().getPosition().y == 0)
@@ -245,6 +251,7 @@ int main()
             if (check == enemies.size()) //If no enemy has moved, the randomly selected one moves
             {
                 enemies[selection].move();
+                enemies[random].Shoot();
             }
             else //Otherwise the one that has moved continues moving
             {
@@ -266,17 +273,7 @@ int main()
             {
                 time = 200;
                 left = false;
-                if (enemies.size() > 1)
-                {
-                    if (selection == enemies.size() - 1)
-                    {
-                        enemies[selection - 1].Shoot();
-                    }
-                    else
-                    {
-                        enemies[selection + 1].Shoot();
-                    }
-                }
+                enemies[random].Shoot();
             }
             //Clears the window
             display.window.clear();
@@ -291,7 +288,6 @@ int main()
                 for (int j = 0; j < enemies[i].getProjectiles().size(); j++)
                 {
                     enemies[i].updateProjectiles(j);
-                    display.window.draw(enemies[i].getProjectiles()[j]);
                 }
             }
 
@@ -305,6 +301,14 @@ int main()
             for (int i = 0; i < enemies.size(); i++) //Draws the enemies on the screen
             {
                 display.window.draw(enemies[i].getShape());
+            }
+
+            for (int i = 0; i < enemies.size(); i++)
+            {
+                for (int j = 0; j < enemies[i].getProjectiles().size(); j++)
+                {
+                    display.window.draw(enemies[i].getProjectiles()[j]);
+                }
             }
 
             //Displays the new frame
