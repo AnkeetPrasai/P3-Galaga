@@ -223,9 +223,14 @@ int main()
               WinScreen();
             }
 
-            int selection = rand() % enemies.size(); //Randomly selects an enemy ship
+            int selection = 0;
+            if (enemies.size() == 0)
+            {
+                break;
+            }
             int check = 0;
             int previous = 0;
+            selection = rand() % enemies.size(); //Randomly selects an enemy ship
             for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
             {
                 if (enemies[i].getShape().getPosition().y == 0)
