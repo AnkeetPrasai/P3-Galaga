@@ -42,7 +42,10 @@ https://www.sfml-dev.org/tutorials/2.5/audio-sounds.php
 Help With Pressing Multiple Keys Down At Once (from Jesper Juhl, Re: Detect multiple keypress « Reply #5 on: June 09, 2014, 09:49:10 pm »)
 https://en.sfml-dev.org/forums/index.php?topic=15477.0
 
+Brandon Lefert
 
+SFML Dev Website
+https://www.sfml-dev.org/
 
 
 
