@@ -17,8 +17,13 @@ hr total
 Brandon Lefert:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
 3/25: 2 hr - Research with movement and added in movement onto shape and close window with ESC
+3/28: 3 hr - Made the global display as well as added in the shooting mechanic, started enemy class
+3/29: 3 hr - Merged window design with main branch, developed enemy class, movement up and down
+3/31: 2hr - Started on collisions with projectiles, enemies and player
+4/1: 4 hr - Added end game mechanics, player can win and lose, and enemies move back and forth across screen
+4/2: 3 hr - Fixed end game mechanics to fix bugs and added in scoreboard and lives displayed on screen
 
-hr total
+17.5 hr total
 
 Hu Tang:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
