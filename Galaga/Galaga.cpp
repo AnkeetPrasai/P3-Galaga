@@ -243,6 +243,8 @@ int Play()
                        {
                              display.window.close();
                              check = 0;
+                             check1 = 0;
+                             test = 1;
                        }
                        else
                        {
