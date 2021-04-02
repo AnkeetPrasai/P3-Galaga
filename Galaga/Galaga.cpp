@@ -75,6 +75,86 @@ void StartScreen()
   }
 }
 
+void EndScreen()
+{
+  sf::Texture GameOver;
+  sf::Sprite EndScreen;
+
+  if (!music.openFromFile("gameOverSound.ogg"))
+  {
+      return; // error
+  }
+  music.play();
+
+  if (!GameOver.loadFromFile("GameOver.jpg"))
+  {
+    cout << "Could not load Game Over image" << endl;
+  }
+
+  EndScreen.setTexture(GameOver);
+
+  display.window.draw(EndScreen);
+
+
+  display.window.display();
+
+  while (display.window.isOpen())
+  {
+      Event e;
+      // Checks for any input from user and it send it to event handler
+      while (display.window.pollEvent(e))
+      {
+          if (e.type == Event::KeyPressed)
+          {
+            if (e.key.code == Keyboard::Space)
+            {
+              display.window.close();
+            }
+          }
+      }
+  }
+}
+
+void WinScreen()
+{
+  sf::Texture Win;
+  sf::Sprite WinScreen;
+
+  if (!music.openFromFile("winSound.ogg"))
+  {
+      return; // error
+  }
+  music.play();
+
+  if (!Win.loadFromFile("youWin.png"))
+  {
+    cout << "Could not load Winning Screen image" << endl;
+  }
+
+  WinScreen.setTexture(Win);
+
+  display.window.draw(WinScreen);
+
+
+  display.window.display();
+
+  while (display.window.isOpen())
+  {
+      Event e;
+      // Checks for any input from user and it send it to event handler
+      while (display.window.pollEvent(e))
+      {
+          if (e.type == Event::KeyPressed)
+          {
+            if (e.key.code == Keyboard::Space)
+            {
+              display.window.close();
+            }
+          }
+      }
+  }
+}
+
 int main()
 {
   int check = 1;
@@ -106,6 +186,9 @@ int main()
             {
                 if (e.key.code == Keyboard::Space)
                 {
+                  // if (e.key.code == Keyboard::Space && e.key.code == Keyboard::A)
+                  // {
+                  // p.Movement(e);
                   p.Shoot();
                   if (!music.openFromFile("Laser.ogg"))
                   {
@@ -122,7 +205,8 @@ int main()
                 {
                     p.Movement(e);
                 }
-            }
+            // }
+          }
             if (e.type == Event::Closed)
             {
                 display.window.close();
@@ -130,13 +214,13 @@ int main()
             }
             if (p.gameOver())
             {
-                display.window.close();
-                check = 0;
+              check = 0;
+              EndScreen();
             }
             if (enemies.size() == 0)
             {
-                display.window.close();
-                check = 0;
+              check = 0;
+              WinScreen();
             }
 
             int selection = rand() % enemies.size(); //Randomly selects an enemy ship
@@ -197,11 +281,6 @@ int main()
             {
                 display.window.draw(enemies[i].getShape());
             }
-
-            //sf::CircleShape shape(50);
-            //shape.setFillColor(sf::Color(100, 250, 50));
-            //window.draw(shape);
-
 
             //Displays the new frame
             display.window.display();

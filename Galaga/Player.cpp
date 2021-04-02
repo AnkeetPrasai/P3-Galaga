@@ -7,6 +7,8 @@ Player::Player()
 	shape.setPointCount(3);
 	shape.setPosition(display.window.getSize().x / 2, 700);
 	projectile.setRadius(5.f);
+  projectile.setFillColor(sf::Color::Red);
+
     lives = 3;
 }
 
@@ -17,33 +19,189 @@ Player::~Player()
 
 void Player::Movement(Event e)
 {
-        switch (e.key.code)
-        {
-		//AWDS
+//   bool up = false;
+//   bool down = false;
+//   bool right = false;
+//   bool left = false;
+//   // int a = 0;
+//         // switch (e.key.code)
+//       // while (display.window.pollEvent(e))
+//       // {
+//         std::cout << "test2";
+//
+//
+//     while (display.window.isOpen()) {
+//       while (display.window.pollEvent(e)) {
+//         switch (e.type)
+//         {
+//   		//AWDS
+//           case Event::KeyPressed:
+//             if (e.key.code == Keyboard::A)
+//             {
+//               left = true;
+//             }
+//             else if (e.key.code == Keyboard::W)
+//             {
+//               up = true;
+//             }
+//             else if (e.key.code == Keyboard::S)
+//             {
+//               down = true;
+//             }
+//             else if (e.key.code == Keyboard::D)
+//             {
+//               right = true;
+//
+//             }
+//             break;
+//           case Event::KeyReleased:
+//             if (e.key.code == Keyboard::A)
+//             {
+//               left = false;
+//             }
+//            else if (e.key.code == Keyboard::W)
+//             {
+//               up = false;
+//             }
+//             else if (e.key.code == Keyboard::S)
+//             {
+//               down = false;
+//             }
+//             else if (e.key.code == Keyboard::D)
+//             {
+//               right = false;
+//             }
+//             break;
+//           case Event::Closed:
+//             display.window.close();
+//             break;
+//           default:
+//             break;
+//         }
+//       }
+//
+//
+//       if (up && down)
+//       {
+//         std::cout << "Moving up and down" << std::endl;
+//         shape.move(0, -20);
+//         shape.move(0, 20);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (up && left)
+//       {
+//         std::cout << "Moving up and left" << std::endl;
+//         shape.move(0, -20);
+//         shape.move(-20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (up && right)
+//       {
+//        std::cout << "Moving up and right" << std::endl;
+//         shape.move(0, -20);
+//         shape.move(20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (down && left)
+//       {
+//         std::cout << "Moving down and left" << std::endl;
+//         shape.move(0, 20);
+//         shape.move(-20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (down && right)
+//       {
+//         std::cout << "Moving down and right" << std::endl;
+//         shape.move(0, -20);
+//         shape.move(20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (left && right)
+//       {
+//         std::cout << "Moving left and right" << std::endl;
+//         shape.move(-20, 0);
+//         shape.move(20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//           return; // error
+//         music.play();
+//       }
+//       else if (up)
+//       {
+//         std::cout << "Moving up" << std::endl;
+//         shape.move(0, -20);
+//       	if (!music.openFromFile("MoveSound.ogg"))
+//       		return; // error
+//       	music.play();
+//       }
+//       else if (right)
+//       {
+//         std::cout << "Moving right" << std::endl;
+//         shape.move(20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//            return; // error
+//         music.play();
+//       }
+//       else if (down)
+//       {
+//           std::cout << "Moving down" << std::endl;
+//           shape.move(0, 20);
+//     		  if (!music.openFromFile("MoveSound.ogg"))
+//     			    return; // error
+//     		  music.play();
+//       }
+//       else if (left)
+//       {
+//         std::cout << "Moving left" << std::endl;
+//         shape.move(-20, 0);
+//         if (!music.openFromFile("MoveSound.ogg"))
+//             return; // error
+//         music.play();
+//       }
+//       else
+//       {
+//
+//       }
+
+switch (e.key.code)
+      {
+
         case Keyboard::A:
-            shape.move(-20, 0);
-			if (!music.openFromFile("MoveSound.ogg"))
-				return; // error
-			music.play();
-            break;
+          shape.move(-20, 0);
+          if (!music.openFromFile("MoveSound.ogg"))
+            return; // error
+          music.play();
+          break;
+
         case Keyboard::W:
-            shape.move(0, -20);
-			if (!music.openFromFile("MoveSound.ogg"))
-				return; // error
-			music.play();
-            break;
+          shape.move(0, -20);
+    			if (!music.openFromFile("MoveSound.ogg"))
+    				return; // error
+    			music.play();
+          break;
+
         case Keyboard::D:
-            shape.move(20, 0);
-			if (!music.openFromFile("MoveSound.ogg"))
-				return; // error
-			music.play();
-            break;
+          shape.move(20, 0);
+    			if (!music.openFromFile("MoveSound.ogg"))
+    				return; // error
+  			  music.play();
+          break;
+
         case Keyboard::S:
-            shape.move(0, 20);
-			if (!music.openFromFile("MoveSound.ogg"))
-				return; // error
-			music.play();
-            break;
+          shape.move(0, 20);
+  			  if (!music.openFromFile("MoveSound.ogg"))
+  				    return; // error
+  			  music.play();
+          break;
 
 		//Up, Down, Left, Right mode
 		case Keyboard::Left:
@@ -58,7 +216,7 @@ void Player::Movement(Event e)
 		case Keyboard::Down:
 			shape.move(0, 20);
 			break;
-        }
+}
 
 		//Keeps track if the player ends up off the screen
 		if (shape.getPosition().x < 0)
@@ -77,6 +235,7 @@ void Player::Movement(Event e)
 		{
 			shape.setPosition(shape.getPosition().x, 0); //Resets if the player goes off the bottom
 		}
+  // }
 }
 
 CircleShape Player::getShape()
