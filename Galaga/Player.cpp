@@ -5,9 +5,9 @@ Player::Player()
 {
     shape.setRadius(20.f);
 	shape.setPointCount(3);
-	shape.setPosition(display.window.getSize().x / 2, 700);
+	shape.setPosition(display.window.getSize().x / 2, 680);
 	projectile.setRadius(5.f);
-  projectile.setFillColor(sf::Color::Red);
+    projectile.setFillColor(sf::Color::Red);
 
     lives = 3;
 }
@@ -277,10 +277,21 @@ bool Player::checkCollison(Enemy e)
 	bool collison = false;
 	Rect<float> p(shape.getPosition().x, shape.getPosition().y, 40.f, 40.f);
 	Rect<float> en(e.getShape().getPosition().x, e.getShape().getPosition().y, 10.f, 10.f);
+	for (int i = 0; i < e.getProjectiles().size(); i++)
+	{
+		Rect<float> pro(e.getProjectiles()[i].getPosition().x, e.getProjectiles()[i].getPosition().y, 5.f, 5.f);
+		if (p.intersects(pro))
+		{
+			lives--;
+			shape.setPosition(display.window.getSize().x / 2, 680);
+			e.getShape().setPosition(e.getPosition(), 0);
+			collison = true;
+		}
+	}
 	if (p.intersects(en))
 	{
 		lives--;
-		shape.setPosition(display.window.getSize().x / 2, 700);
+		shape.setPosition(display.window.getSize().x / 2, 680);
 		e.getShape().setPosition(e.getPosition(), 0);
 		collison = true;
 	}

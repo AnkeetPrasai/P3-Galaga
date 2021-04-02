@@ -7,6 +7,8 @@ Enemy::Enemy(int x, int y)
 	shape.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
 	startX = x;
 	startY = y;
+	projectile.setRadius(5.f);
+	projectile.setFillColor(sf::Color::Red);
 }
 
 Enemy::~Enemy()

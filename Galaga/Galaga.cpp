@@ -223,9 +223,14 @@ int main()
               WinScreen();
             }
 
-            int selection = rand() % enemies.size(); //Randomly selects an enemy ship
+            int selection = 0;
+            if (enemies.size() == 0)
+            {
+                break;
+            }
             int check = 0;
             int previous = 0;
+            selection = rand() % enemies.size(); //Randomly selects an enemy ship
             for (int i = 0; i < enemies.size(); i++) //Checks if any ship has started moving
             {
                 if (enemies[i].getShape().getPosition().y == 0)
@@ -243,7 +248,7 @@ int main()
             }
             else //Otherwise the one that has moved continues moving
             {
-                    enemies[previous].move();
+                enemies[previous].move();
             }
             if (time == 0)
             {
@@ -261,13 +266,33 @@ int main()
             {
                 time = 200;
                 left = false;
+                if (enemies.size() > 1)
+                {
+                    if (selection == enemies.size() - 1)
+                    {
+                        enemies[selection - 1].Shoot();
+                    }
+                    else
+                    {
+                        enemies[selection + 1].Shoot();
+                    }
+                }
             }
             //Clears the window
             display.window.clear();
 
-            for (int i = 0; i < p.getProjectiles().size(); i++) //Updates the projectiles with there new position
+            for (int i = 0; i < p.getProjectiles().size(); i++) //Updates the projectiles with their new positions
             {
                 p.updateProjectiles(i, enemies);
+            }
+
+            for (int i = 0; i < enemies.size(); i++)
+            {
+                for (int j = 0; j < enemies[i].getProjectiles().size(); j++)
+                {
+                    enemies[i].updateProjectiles(j);
+                    display.window.draw(enemies[i].getProjectiles()[j]);
+                }
             }
 
             display.window.draw(p.getShape()); //Draws the player on the screen
