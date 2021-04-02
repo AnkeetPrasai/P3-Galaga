@@ -4,6 +4,7 @@ Enemy::Enemy(int x, int y)
 {
 	shape.setRadius(10.f);
 	shape.setPosition(x, y);
+	shape.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
 	startX = x;
 	startY = y;
 }
