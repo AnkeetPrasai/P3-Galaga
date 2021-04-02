@@ -248,7 +248,7 @@ int main()
             }
             else //Otherwise the one that has moved continues moving
             {
-                    enemies[previous].move();
+                enemies[previous].move();
             }
             if (time == 0)
             {
