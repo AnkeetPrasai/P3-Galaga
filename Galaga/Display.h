@@ -16,19 +16,19 @@ class Display
 {
 	public:
 		
-		/*
+		/**
 		* Default constructor, sets tup the window
-		*/
+		**/
 		Display();
 
-		/*
+		/**
 		* Default deconstructor
-		*/
+		**/
 		~Display();
 
-		/*
+		/**
 		* The window that gets used
-		*/
+		**/
 		RenderWindow window;
 };
 #endif

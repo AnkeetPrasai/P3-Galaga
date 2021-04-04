@@ -1,0 +1,104 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_a2ec0b0f0f1503c1e7867f601c5e27b1e}\label{class_player_a2ec0b0f0f1503c1e7867f601c5e27b1e}} 
+bool \mbox{\hyperlink{class_player_a2ec0b0f0f1503c1e7867f601c5e27b1e}{check\+Collison}} (\mbox{\hyperlink{class_enemy}{Enemy}} \&)
+\begin{DoxyCompactList}\small\item\em Checks if the player has been hit @parm \mbox{\hyperlink{class_enemy}{Enemy}} -\/ The enemy that ran into the player @parm bool -\/ Returns true if the player is hit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a98dff5ba148838f3db6d9934048c33d9}{game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost @parm Nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_af56ac33b9b2ebd9f97c8a6f485cf2d47}\label{class_player_af56ac33b9b2ebd9f97c8a6f485cf2d47}} 
+int \mbox{\hyperlink{class_player_af56ac33b9b2ebd9f97c8a6f485cf2d47}{get\+Lives}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of lives the player has @parm Nothing @parm int -\/ Returns the number of lives the player has. \end{DoxyCompactList}\item 
+std\+::vector$<$ Circle\+Shape $>$ \mbox{\hyperlink{class_player_af0c9021c212581f16b295d694aff0dc5}{get\+Projectiles}} ()
+\begin{DoxyCompactList}\small\item\em Returns all the projectiles that the player has shot @parm Nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a97e5447778ae6c384eedc532dcd8431d}\label{class_player_a97e5447778ae6c384eedc532dcd8431d}} 
+int \mbox{\hyperlink{class_player_a97e5447778ae6c384eedc532dcd8431d}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Returns the score of the player @parm Nothing @parm int -\/ Returns the value of the player\textquotesingle{}s score. \end{DoxyCompactList}\item 
+Circle\+Shape \mbox{\hyperlink{class_player_a46ae3ae1c7540836592c67bcaf34f11d}{get\+Shape}} ()
+\begin{DoxyCompactList}\small\item\em Returns the shape of player @parm Nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a4bb332d155d698d5adb56664f81096e4}{Movement}} (Event)
+\begin{DoxyCompactList}\small\item\em Allows for the movement with the player @parm Event -\/ The event to keep track of key presses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, sets the player up with lives and their shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a287c36cd23086bf771ed109155212dab}{update\+Projectiles}} (int, std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Updates all of the projectiles the player shot and see if there are any collisions @parm int -\/ The projectile to update @parm vector$<$\+Enemy$>$ -\/ The vector holding all of the enemies on the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Standard deconstructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a98dff5ba148838f3db6d9934048c33d9}\label{class_player_a98dff5ba148838f3db6d9934048c33d9}} 
+\index{Player@{Player}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{gameOver()}{gameOver()}}
+{\footnotesize\ttfamily bool Player\+::game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the player has lost @parm Nothing. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ If the player has lost, return true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_af0c9021c212581f16b295d694aff0dc5}\label{class_player_af0c9021c212581f16b295d694aff0dc5}} 
+\index{Player@{Player}!getProjectiles@{getProjectiles}}
+\index{getProjectiles@{getProjectiles}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getProjectiles()}{getProjectiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ Circle\+Shape $>$ Player\+::get\+Projectiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns all the projectiles that the player has shot @parm Nothing. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Circle\+Shape$>$ -\/ Vector containing all of the shots the player has shot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a46ae3ae1c7540836592c67bcaf34f11d}\label{class_player_a46ae3ae1c7540836592c67bcaf34f11d}} 
+\index{Player@{Player}!getShape@{getShape}}
+\index{getShape@{getShape}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getShape()}{getShape()}}
+{\footnotesize\ttfamily Circle\+Shape Player\+::get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the shape of player @parm Nothing. 
+
+\begin{DoxyReturn}{Returns}
+Circle\+Shape -\/ The shape that the player uses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a4bb332d155d698d5adb56664f81096e4}\label{class_player_a4bb332d155d698d5adb56664f81096e4}} 
+\index{Player@{Player}!Movement@{Movement}}
+\index{Movement@{Movement}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Movement()}{Movement()}}
+{\footnotesize\ttfamily void Player\+::\+Movement (\begin{DoxyParamCaption}\item[{Event}]{e }\end{DoxyParamCaption})}
+
+
+
+Allows for the movement with the player @parm Event -\/ The event to keep track of key presses. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a287c36cd23086bf771ed109155212dab}\label{class_player_a287c36cd23086bf771ed109155212dab}} 
+\index{Player@{Player}!updateProjectiles@{updateProjectiles}}
+\index{updateProjectiles@{updateProjectiles}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{updateProjectiles()}{updateProjectiles()}}
+{\footnotesize\ttfamily void Player\+::update\+Projectiles (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Updates all of the projectiles the player shot and see if there are any collisions @parm int -\/ The projectile to update @parm vector$<$\+Enemy$>$ -\/ The vector holding all of the enemies on the board. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+GALAGA/\+Galaga/Player.\+h\item 
+C\+:/\+GALAGA/\+Galaga/Player.\+cpp\end{DoxyCompactItemize}

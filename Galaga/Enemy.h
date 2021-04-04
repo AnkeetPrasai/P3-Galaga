@@ -12,30 +12,30 @@ using namespace sf;
 class Enemy
 {
 public:
-	/*
+	/**
 	* Default constructor, sets up the enemy starting position
 	* @parm int - The starting x position
 	* @parm int - The starting y position
-	*/
+	**/
 	Enemy(int, int);
 
-	/*
+	/**
 	* Default deconstructor
-	*/
+	**/
 	~Enemy();
 
-	/*
+	/**
 	* Allows for the enemies to shoot
 	* @parm Nothing
 	* @return Nothing
-	*/
+	**/
 	void Shoot();
 
-	/*
+	/**
 	* Updates the projectiles that the enemies shoot
 	* @parm int - The projectile in the vector to update
 	* @return Nothing
-	*/
+	**/
 	void updateProjectiles(int);
 
 	/*
@@ -45,46 +45,54 @@ public:
 	*/
 	std::vector<CircleShape> getProjectiles();
 
-	/*
+	/**
 	* Returns the shape of the enemies
 	* @parm Nothing
 	* @return CircleShape - The shape of the enemy
-	*/
+	**/
 	CircleShape getShape();
 
-	/*
+	/**
 	* Allows for the movement of the enemies
 	* @parm Nothing
 	* @return Nothing
-	*/
+	**/
 	void move();
 
-	/*
+	/**
 	* Returns the x position of the enemy
 	* @parm Nothing
 	* @return int - The original x position of the enemy
-	*/
+	**/
 	int getPosition();
 
-	/*
+	/**
 	* Allows for the left and right movement of the enemy
 	* @parm bool - True if moving left, false if right
 	* @return Nothing
-	*/
+	**/
 	void backAndForth(bool);
 
 private:
 
-	/** The shape of the enemy **/
+	/** 
+	* The shape of the enemy 
+	**/
 	CircleShape shape;
 
-	/** The shape of the enemies projectiles **/
+	/** 
+	* The shape of the enemies projectiles 
+	**/
 	CircleShape projectile;
 
-	/** The vector containing the projectiles **/
+	/** 
+	* The vector containing the projectiles 
+	**/
 	std::vector<CircleShape> projectiles;
 
-	/** the starting values of the enemies **/
+	/** 
+	* the starting values of the enemies 
+	**/
 	int startX, startY;
 };
 #endif

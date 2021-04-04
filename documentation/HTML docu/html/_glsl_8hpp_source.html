@@ -110,10 +110,10 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Forward declarations</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> Columns, std::<span class="keywordtype">size_t</span> Rows&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structsf_1_1priv_1_1_matrix.html">   43</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsf_1_1priv_1_1_matrix.html">Matrix</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_matrix.html">Matrix</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structsf_1_1priv_1_1_vector4.html">   46</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsf_1_1priv_1_1_vector4.html">Vector4</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_vector4.html">Vector4</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Glsl.inl&gt;</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
@@ -137,23 +137,23 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#ifdef SFML_DOXYGEN</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> implementation-defined <a class="code" href="structsf_1_1priv_1_1_vector4.html">Vec4</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> implementation-defined Vec4;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> implementation-defined <a class="code" href="structsf_1_1priv_1_1_vector4.html">Ivec4</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> implementation-defined Ivec4;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> implementation-defined <a class="code" href="structsf_1_1priv_1_1_vector4.html">Bvec4</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> implementation-defined Bvec4;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">typedef</span> implementation-defined <a class="code" href="structsf_1_1priv_1_1_matrix.html">Mat3</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">typedef</span> implementation-defined Mat3;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">typedef</span> implementation-defined <a class="code" href="structsf_1_1priv_1_1_matrix.html">Mat4</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">typedef</span> implementation-defined Mat4;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#else </span><span class="comment">// SFML_DOXYGEN</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structsf_1_1priv_1_1_vector4.html">priv::Vector4&lt;float&gt;</a> <a class="code" href="structsf_1_1priv_1_1_vector4.html">Vec4</a>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structsf_1_1priv_1_1_vector4.html">priv::Vector4&lt;int&gt;</a> <a class="code" href="structsf_1_1priv_1_1_vector4.html">Ivec4</a>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structsf_1_1priv_1_1_vector4.html">priv::Vector4&lt;bool&gt;</a> <a class="code" href="structsf_1_1priv_1_1_vector4.html">Bvec4</a>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structsf_1_1priv_1_1_matrix.html">priv::Matrix&lt;3, 3&gt;</a> <a class="code" href="structsf_1_1priv_1_1_matrix.html">Mat3</a>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="structsf_1_1priv_1_1_matrix.html">priv::Matrix&lt;4, 4&gt;</a> <a class="code" href="structsf_1_1priv_1_1_matrix.html">Mat4</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">typedef</span> priv::Vector4&lt;float&gt; Vec4;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">typedef</span> priv::Vector4&lt;int&gt; Ivec4;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">typedef</span> priv::Vector4&lt;bool&gt; Bvec4;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">typedef</span> priv::Matrix&lt;3, 3&gt; Mat3;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">typedef</span> priv::Matrix&lt;4, 4&gt; Mat4;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SFML_DOXYGEN</span></div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
@@ -171,8 +171,8 @@ $(function() {
 <div class="ttc" id="anamespacesf_1_1_glsl_html_a9bdd0463b7cb5316244a082007bd50f0"><div class="ttname"><a href="namespacesf_1_1_glsl.html#a9bdd0463b7cb5316244a082007bd50f0">sf::Glsl::Vec3</a></div><div class="ttdeci">Vector3&lt; float &gt; Vec3</div><div class="ttdoc">3D float vector (vec3 in GLSL)</div><div class="ttdef"><b>Definition:</b> Glsl.hpp:82</div></div>
 <div class="ttc" id="anamespacesf_1_1_glsl_html_aab803ee70c4b7bfcd63ec09e10408fd3"><div class="ttname"><a href="namespacesf_1_1_glsl.html#aab803ee70c4b7bfcd63ec09e10408fd3">sf::Glsl::Ivec2</a></div><div class="ttdeci">Vector2&lt; int &gt; Ivec2</div><div class="ttdoc">2D int vector (ivec2 in GLSL)</div><div class="ttdef"><b>Definition:</b> Glsl.hpp:70</div></div>
 <div class="ttc" id="anamespacesf_1_1_glsl_html_adeed356d346d87634b4c197a530e4edf"><div class="ttname"><a href="namespacesf_1_1_glsl.html#adeed356d346d87634b4c197a530e4edf">sf::Glsl::Vec2</a></div><div class="ttdeci">Vector2&lt; float &gt; Vec2</div><div class="ttdoc">2D float vector (vec2 in GLSL)</div><div class="ttdef"><b>Definition:</b> Glsl.hpp:64</div></div>
-<div class="ttc" id="astructsf_1_1priv_1_1_matrix_html"><div class="ttname"><a href="structsf_1_1priv_1_1_matrix.html">sf::priv::Matrix</a></div><div class="ttdef"><b>Definition:</b> Glsl.hpp:43</div></div>
-<div class="ttc" id="astructsf_1_1priv_1_1_vector4_html"><div class="ttname"><a href="structsf_1_1priv_1_1_vector4.html">sf::priv::Vector4</a></div><div class="ttdef"><b>Definition:</b> Glsl.hpp:46</div></div>
+<div class="ttc" id="astruct_matrix_html"><div class="ttname"><a href="struct_matrix.html">Matrix</a></div><div class="ttdoc">Matrix type, used to set uniforms in GLSL.</div><div class="ttdef"><b>Definition:</b> Glsl.inl:56</div></div>
+<div class="ttc" id="astruct_vector4_html"><div class="ttname"><a href="struct_vector4.html">Vector4</a></div><div class="ttdoc">4D vector type, used to set uniforms in GLSL</div><div class="ttdef"><b>Definition:</b> Glsl.inl:93</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

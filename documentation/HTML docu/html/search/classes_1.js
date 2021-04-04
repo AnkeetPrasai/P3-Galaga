@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blendmode_916',['BlendMode',['../structsf_1_1_blend_mode.html',1,'sf']]]
+  ['enemy_20',['Enemy',['../dd/d7a/class_enemy.html',1,'']]]
 ];
