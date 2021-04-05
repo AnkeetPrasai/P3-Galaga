@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_15',['window',['../df/d4d/class_display.html#a3085e5740cd8760b4765cf134c51c760',1,'Display']]]
+  ['updateprojectiles_34',['updateProjectiles',['../dd/d7a/class_enemy.html#a9430f6385c792b92899139085d997fb2',1,'Enemy::updateProjectiles()'],['../d8/d53/class_player.html#a287c36cd23086bf771ed109155212dab',1,'Player::updateProjectiles()']]]
 ];

@@ -72,19 +72,19 @@ $(function() {
 <div class="title">Player.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<a href="../../d1/d39/_player_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;SFML\System.hpp&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SFML\Graphics.hpp&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;SFML\Window.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;SFML\Audio.hpp&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;SFML\Network.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Display.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Enemy.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dde/_display_8h.html">Display.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1e/_enemy_8h.html">Enemy.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>sf;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../df/d4d/class_display.html">Display</a> display;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../df/d4d/class_display.html">Display</a> <a class="code" href="../../d1/d39/_player_8h.html#aa5083e8fab8ddaf62944949e251663bb">display</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef Player_H</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define Player_H</span></div>
@@ -121,20 +121,28 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">int</span> getLives();</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">int</span> lives;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#ab3300fa23175647f3ff50311dd2a7e04">  100</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d8/d53/class_player.html#ab3300fa23175647f3ff50311dd2a7e04">lives</a>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        CircleShape shape;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#ae52089cc5f246712dba2405eb0c7069b">  105</a></span>&#160;        CircleShape <a class="code" href="../../d8/d53/class_player.html#ae52089cc5f246712dba2405eb0c7069b">shape</a>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        CircleShape projectile;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#a7a4319e1f49b8e3acf4fe4f8f7433b26">  110</a></span>&#160;        CircleShape <a class="code" href="../../d8/d53/class_player.html#a7a4319e1f49b8e3acf4fe4f8f7433b26">projectile</a>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        std::vector&lt;CircleShape&gt; projectiles;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#a5d3adb3266dd0d84057c0f4e557b947f">  115</a></span>&#160;        std::vector&lt;CircleShape&gt; <a class="code" href="../../d8/d53/class_player.html#a5d3adb3266dd0d84057c0f4e557b947f">projectiles</a>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">int</span> score;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="../../d8/d53/class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">  120</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d8/d53/class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a>;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_display_8h_html"><div class="ttname"><a href="../../df/dde/_display_8h.html">Display.h</a></div></div>
+<div class="ttc" id="a_enemy_8h_html"><div class="ttname"><a href="../../d4/d1e/_enemy_8h.html">Enemy.h</a></div></div>
+<div class="ttc" id="a_player_8h_html_aa5083e8fab8ddaf62944949e251663bb"><div class="ttname"><a href="../../d1/d39/_player_8h.html#aa5083e8fab8ddaf62944949e251663bb">display</a></div><div class="ttdeci">Display display</div><div class="ttdef"><b>Definition:</b> Player.cpp:3</div></div>
 <div class="ttc" id="aclass_display_html"><div class="ttname"><a href="../../df/d4d/class_display.html">Display</a></div><div class="ttdef"><b>Definition:</b> Display.h:16</div></div>
 <div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="../../dd/d7a/class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> Enemy.h:13</div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="../../d8/d53/class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
+<div class="ttc" id="aclass_player_html_a5d3adb3266dd0d84057c0f4e557b947f"><div class="ttname"><a href="../../d8/d53/class_player.html#a5d3adb3266dd0d84057c0f4e557b947f">Player::projectiles</a></div><div class="ttdeci">std::vector&lt; CircleShape &gt; projectiles</div><div class="ttdoc">The vector containing all of the projectiles the player has shot.</div><div class="ttdef"><b>Definition:</b> Player.h:115</div></div>
+<div class="ttc" id="aclass_player_html_a7a4319e1f49b8e3acf4fe4f8f7433b26"><div class="ttname"><a href="../../d8/d53/class_player.html#a7a4319e1f49b8e3acf4fe4f8f7433b26">Player::projectile</a></div><div class="ttdeci">CircleShape projectile</div><div class="ttdoc">The circle shape of the projectiles they shoot.</div><div class="ttdef"><b>Definition:</b> Player.h:110</div></div>
+<div class="ttc" id="aclass_player_html_ab3300fa23175647f3ff50311dd2a7e04"><div class="ttname"><a href="../../d8/d53/class_player.html#ab3300fa23175647f3ff50311dd2a7e04">Player::lives</a></div><div class="ttdeci">int lives</div><div class="ttdoc">The total number of lives the player has.</div><div class="ttdef"><b>Definition:</b> Player.h:100</div></div>
+<div class="ttc" id="aclass_player_html_ace6abae8d66534ad0a1fd6458f786a6e"><div class="ttname"><a href="../../d8/d53/class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">Player::score</a></div><div class="ttdeci">int score</div><div class="ttdoc">The score that the player has.</div><div class="ttdef"><b>Definition:</b> Player.h:120</div></div>
+<div class="ttc" id="aclass_player_html_ae52089cc5f246712dba2405eb0c7069b"><div class="ttname"><a href="../../d8/d53/class_player.html#ae52089cc5f246712dba2405eb0c7069b">Player::shape</a></div><div class="ttdeci">CircleShape shape</div><div class="ttdoc">The triangle shape of the user.</div><div class="ttdef"><b>Definition:</b> Player.h:105</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

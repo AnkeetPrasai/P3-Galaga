@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['default_1507',['Default',['../classsf_1_1_render_states.html#ad29672df29f19ce50c3021d95f2bb062',1,'sf::RenderStates']]],
-  ['delta_1508',['delta',['../structsf_1_1_event_1_1_mouse_wheel_event.html#a4d02b524b5530c7863e7b0f211fa522c',1,'sf::Event::MouseWheelEvent::delta()'],['../structsf_1_1_event_1_1_mouse_wheel_scroll_event.html#ac45c164997a594d424071e74b53b5817',1,'sf::Event::MouseWheelScrollEvent::delta()']]],
-  ['depthbits_1509',['depthBits',['../structsf_1_1_context_settings.html#a4809e22089c2af7276b8809b5aede7bb',1,'sf::ContextSettings']]]
+  ['projectile_76',['projectile',['../dd/d7a/class_enemy.html#a77401e4a43aaaf9dd6d89ac150db4909',1,'Enemy::projectile()'],['../d8/d53/class_player.html#a7a4319e1f49b8e3acf4fe4f8f7433b26',1,'Player::projectile()']]],
+  ['projectiles_77',['projectiles',['../dd/d7a/class_enemy.html#a5c5d51e68617924a761f682e8ad1ac13',1,'Enemy::projectiles()'],['../d8/d53/class_player.html#a5d3adb3266dd0d84057c0f4e557b947f',1,'Player::projectiles()']]]
 ];

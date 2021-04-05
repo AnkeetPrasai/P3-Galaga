@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['g_1512',['g',['../classsf_1_1_color.html#a591daf9c3c55dea830c76c962d6ba1a5',1,'sf::Color']]],
-  ['green_1513',['Green',['../classsf_1_1_color.html#a95629b30de8c6856aa7d3afed12eb865',1,'sf::Color']]]
+  ['window_82',['window',['../df/d4d/class_display.html#a3085e5740cd8760b4765cf134c51c760',1,'Display']]]
 ];
