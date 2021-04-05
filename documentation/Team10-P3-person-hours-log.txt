@@ -37,5 +37,7 @@ Brandon Lefert:
 
 Hu Tang:
 3/18: 0.5 hr - Project 3 Idea Planning Meeting
-
+4/1 : 1 hr - check the code
+4/2 : 0.5 hr - a little bit  documentation
+4/3 : 2 hr - work on the code bugs
 hr total
