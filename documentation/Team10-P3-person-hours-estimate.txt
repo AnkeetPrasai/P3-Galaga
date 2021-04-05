@@ -15,8 +15,6 @@ We anticipate doing all of this will take roughly 15.75 hours a person to be saf
 this project.
 
 
-Final Hours of Project 3 (... hours):
+Final Hours of Project 3 (51.75 hours):
 
-...
-...
-...
+The project took a shorter amount of time than we expected but we ran into a lot of issues figuring out how to implement SMFL in general.
